@@ -1,0 +1,18 @@
+﻿<Window x:Class="Advanced_Shutdown.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Advanced_Shutdown"
+        mc:Ignorable="d"
+        Title="Advanced Shutdown" Height="111" Width="258">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Label Content="Ready to shutdown?"/>
+        <StackPanel Orientation="Horizontal">
+            <CheckBox x:Name="chkStudownTime" Content="Shutdown at specified time" IsChecked="True"/>
+            <TextBox x:Name="txtTime" MinWidth="64" Text="9:45pm"/>
+        </StackPanel>
+        <Button x:Name="btnScheduleShutdown" Click="ScheduleShutdownClickedwnClicked">Schedule Shutdown</Button>
+        <TextBox x:Name="txtOutput" Margin="0,64,0,0" Visibility="Collapsed"/>
+    </StackPanel>
+</Window>
